@@ -13,6 +13,11 @@ app.use(cors());
 
 dotenv.config();
 
+const server = app.listen(PORT, () => {
+  console.log(`server is listening on port ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
+});
+
 app.get("/", (req, res) => {
   res.send({
     api: "africa-agility-api",
@@ -179,9 +184,3 @@ io.on("connection", (socket) => {
     });
   });
 });
-
-const server = app.listen(PORT, () => {
-  console.log(`server is listening on port ${PORT}`);
-  console.log(`http://localhost:${PORT}`);
-});
-s
