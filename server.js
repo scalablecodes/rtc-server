@@ -147,6 +147,7 @@ io.on('connection', (socket) => {
 			hostName: data.username,
 			socketId: socket.id,
 			roomId: data.lesson_title,
+			user: data.user,
 		};
 
 		groupCallRooms.push(newGroupCallRoom);
